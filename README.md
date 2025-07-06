@@ -9,6 +9,10 @@ This project provides a web-based user interface for interacting with and contro
 *   **Browser Control:**  Automates browser actions based on your commands.
 *   **Customizable:**  Allows you to configure the LLM provider, model, and other settings.
 
+## Acknowledgements
+
+This project is built upon the foundational work of the [browser-use](https://github.com/browser-use/browser-use) project. We extend our sincere appreciation to the creators and contributors of `browser-use` for their innovative work in enabling browser automation through natural language. Their efforts have been instrumental in the development of this web UI.
+
 ## Setup Instructions (macOS)
 
 These instructions will guide you through setting up the `browser-use-web-ui` on your macOS machine.
