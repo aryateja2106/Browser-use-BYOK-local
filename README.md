@@ -1,118 +1,42 @@
-# Browser-Use Web UI
+# Browser-Use: Empowering AI Agents with Web and macOS Control
 
-This project provides a web-based user interface for interacting with and controlling a browser automation agent. It allows you to give natural language commands to a large language model (LLM) which then translates those commands into browser actions.
+Hello there! I'm Arya Teja Rudraraju, an AI Product Manager passionate about making cutting-edge technology accessible to everyone. This repository is my endeavor to inspire and guide you through building powerful AI agents that can interact with both web browsers and your macOS system.
 
-## Features
+Inspired by the innovative work of the `browser-use` and `macOS-use` projects, I've consolidated and streamlined the setup process to provide a clear, step-by-step guide for beginners. My goal is to empower you to easily set up and experiment with these exciting technologies locally.
 
-*   **Web-based UI:** A simple and intuitive web interface for controlling the browser agent.
-*   **LLM Integration:**  Supports various LLMs including Google Gemini, OpenAI, and Anthropic.
-*   **Browser Control:**  Automates browser actions based on your commands.
-*   **Customizable:**  Allows you to configure the LLM provider, model, and other settings.
+## Getting Started: A Beginner's Guide
 
-## Acknowledgements
+This project is divided into two main components:
 
-This project is built upon the foundational work of the [browser-use](https://github.com/browser-use/browser-use) project. We extend our sincere appreciation to the creators and contributors of `browser-use` for their innovative work in enabling browser automation through natural language. Their efforts have been instrumental in the development of this web UI.
+1.  **Web UI (`web-ui/`):** A web-based interface for controlling a browser automation agent.
+2.  **macOS Use (`macOS-use/`):** Enables AI agents to interact with and control your macOS system.
 
-## Setup Instructions (macOS)
+To get started, simply navigate to the respective directory and follow the detailed `README.md` instructions within each. Each `README.md` is designed to be a comprehensive guide, assuming minimal prior experience.
 
-These instructions will guide you through setting up the `browser-use-web-ui` on your macOS machine.
+### Step-by-Step Setup:
 
-### Prerequisites
+1.  **Clone this repository:**
 
-*   **Python 3.11 or higher:** You can check your Python version by running `python3 --version`.
-*   **Git:** You can check if Git is installed by running `git --version`.
+    ```bash
+    git clone https://github.com/aryateja2106/browser-use-web-UI.git
+    cd browser-use-web-UI
+    ```
 
-### 1. Clone the Repository
+2.  **Choose your adventure:**
 
-Open your terminal and clone this repository:
+    *   For **Web UI** setup and usage, navigate to `web-ui/`:
 
-```bash
-git clone https://github.com/aryateja2106/browser-use-web-UI.git
-cd browser-use-web-UI
-```
+        ```bash
+        cd web-ui
+        ```
+        Then, follow the instructions in `web-ui/README.md`.
 
-### 2. Set Up the Python Environment
+    *   For **macOS Use** setup and usage, navigate to `macOS-use/`:
 
-We'll use `uv` to create a virtual environment and install the necessary dependencies.
+        ```bash
+        cd macOS-use
+        ```
+        Then, follow the instructions in `macOS-use/README.md`.
 
-```bash
-# Create the virtual environment
-uv venv --python 3.11
 
-# Activate the virtual environment
-source .venv/bin/activate
-```
-
-### 3. Install Dependencies
-
-Install the required Python packages and Playwright browsers:
-
-```bash
-uv pip install -r requirements.txt
-playwright install
-```
-
-### 4. Configure Your Environment
-
-Create a `.env` file by copying the example file:
-
-```bash
-cp .env.example .env
-```
-
-Now, open the `.env` file in a text editor (e.g., `nano .env` or `code .env`) and add the following configuration:
-
-```
-# Your Google Gemini API Key
-GOOGLE_API_KEY="YOUR_GEMINI_API_KEY"
-
-# Set the default LLM to Google
-DEFAULT_LLM="google"
-
-# --- Mac-Specific Browser Settings ---
-# Path to your Chrome browser
-CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-
-# Path to your Chrome user data
-CHROME_USER_DATA="/Users/YourUsername/Library/Application Support/Google/Chrome"
-
-# Keep the browser open between tasks
-CHROME_PERSISTENT_SESSION=true
-```
-
-**Important:**
-
-*   Replace `"YOUR_GEMINI_API_KEY"` with your actual Gemini API key.
-*   Replace `YourUsername` with your macOS username.
-
-### 5. Run the Application
-
-To run the application, you first need to start Google Chrome in debug mode.
-
-**Step 1: Start Chrome in Debug Mode**
-
-Open a new terminal window and run the following command:
-
-```bash
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --remote-debugging-port=9222
-```
-
-This will launch a new Chrome window that is ready for automation.
-
-**Step 2: Start the Web UI**
-
-In your original terminal window (where you activated the virtual environment), start the web UI:
-
-```bash
-python webui.py --ip 127.0.0.1 --port 7788
-```
-
-### 6. Access the Web Interface
-
-Open a **different browser** (like Firefox or Safari) and navigate to:
-
-[http://127.0.0.1:7788](http://127.0.0.1:7788)
-
-You should now see the web UI. Make sure to check the **"Use Own Browser"** option in the **Browser Settings** section.
-
-You are now ready to start giving commands to the browser agent!
+I hope this project serves as a valuable resource on your journey to explore the exciting world of AI agents and their capabilities. Happy experimenting!
